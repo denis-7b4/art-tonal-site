@@ -25,6 +25,10 @@ html {
 .container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    background: center / cover url("/images/nausika_bg_big.jpg");
 }
 h1 {
     margin: 5% auto;
