@@ -18,42 +18,105 @@
 :root {
   --font-header-style: "Pacifico";
   --font-text-style: "Roboto Slab";
+  --header-bg-color: #9346A6;
 }
 html {
   width: 100%;
 }
+#header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 12vh;
+  top: 0;
+  left: 0;
+}
+#top_panel {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 80px 239px 1fr;
+  grid-template-rows: 16vh;
+  grid-template-areas:
+  "logo logo empty";
+}
+#logo_click {
+  grid-area: logo;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end ;
+  cursor: pointer;
+  background: var(--header-bg-color);
+  background: content-box linear-gradient(90deg, #9346A6, #E396F6 30%);
+  border-bottom: 8px solid #BBAACC;
+}
+#logo_click img {
+  display: flex;
+  width: 239px;
+  height: 225px;
+  padding-top: 10px;
+}
+.empty {
+  grid-area: empty;
+  background: content-box linear-gradient(90deg, #E396F6, #9346A6 20%);
+  border-bottom: 8px solid #BBAACC;
+}
 .container {
   display: flex;
   width: 100%;
-  min-height: 95vh;
+  min-height: 79vh;
+  margin-top: 16vh;
   background: center / cover url("/images/nausika_bg_big.jpg");
 }
-.wrapper {
+.content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 95vh;
+  min-height: 87vh;
   height: fit-content;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
 }
-h1 {
-  margin: 5% auto;
-  font-family: var(--font-header-style);
-  font-size: 4rem;
-  font-weight: 900;
-  color: #ffcc00;
-  text-shadow: 1px 2px 3px #000000;
+#epigraph {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 70vw 30vw;
+  grid-template-columns: 75vw 25vw;
+  font-family: 'Pacifico';
+  line-height: 1.7rem;
+}
+#epi_txt {
+  margin-top: 5vh;
+  color: #F52020;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+#epi_cit {
+  margin-top: 1vh;
+  text-align: center;
+  color: #9346A6;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+#red_c {
+  color: #F52020;
+  font-size: 1.3em;
+}
+#lilac_c {
+  color: #9346A6;
+  font-size: 1.3em;
 }
 p {
   width: 80vw;
-  margin: 0 auto;
+  margin: 5vh auto;
   align-self: center;
   text-align: center;
   font-family: var(--font-text-style);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  line-height: 3rem;
-  color: #85a000;
+  line-height: 4.5rem;
+
+  /* color: #85a000; */
 }
 
 /* Подвал */
