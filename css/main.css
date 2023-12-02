@@ -1,46 +1,76 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url(/fonts/RobotoSlab-VariableFont_wght.ttf);
+  font-family: "Roboto Slab";
+  src: url(/fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 @font-face {
-    font-family: 'Comforter Brush';
-    src: url(/fonts/ComforterBrush-Regular.ttf);
+  font-family: "Comforter Brush";
+  src: url(/fonts/ComforterBrush-Regular.ttf);
 }
 @font-face {
-    font-family: 'Pacifico';
-    src: url(/fonts/Pacifico-Regular.ttf);
+  font-family: "Pacifico";
+  src: url(/fonts/Pacifico-Regular.ttf);
 }
 :root {
-    --font-header-style: 'Pacifico';
-    --font-text-style: 'Roboto Slab';
+  --font-header-style: "Pacifico";
+  --font-text-style: "Roboto Slab";
 }
 html {
-    width: 100%;
+  width: 100%;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    height: fit-content;
-    background: center / cover url("/images/nausika_bg_big.jpg");
+  display: flex;
+  width: 100%;
+  min-height: 95vh;
+  background: center / cover url("/images/nausika_bg_big.jpg");
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 95vh;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.8);
 }
 h1 {
-    margin: 5% auto;
-    font-family: var(--font-header-style);
-    font-size: 3rem;
-    font-weight: 600;
+  margin: 5% auto;
+  font-family: var(--font-header-style);
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffcc00;
+  text-shadow: 1px 2px 3px #000000;
 }
 p {
-    width: 70vw;
-    margin: 0 auto;
-    align-self: center;
-    text-align: center;
-    font-family: var(--font-text-style);
-    font-size: 1.5rem;
+  width: 80vw;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+  font-family: var(--font-text-style);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: #85a000;
 }
+
+/* Подвал */
+.footer {
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #000000;
+  background: content-box linear-gradient(90deg, #ddddff, #bbaacc 30% 70%, #ddddff);
+  height: 5vh;
+  color: #500000;
+  font-family: "Comforter Brush";
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
