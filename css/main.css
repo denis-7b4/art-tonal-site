@@ -196,7 +196,8 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  gap: 1vw;
+  gap: 1.5vw;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 #s-map div {
@@ -205,6 +206,7 @@ html {
 }
 #s-map a {
   text-decoration: none;
+  color: #444444;
 }
 #s-map a:hover {
   text-decoration: underline;
@@ -221,7 +223,8 @@ html {
   justify-content: center;
   align-items: baseline;
   text-align: center;
-  font-size: 1.3rem;
+  color: #444444;
+  font-size: 1.1rem;
   line-height: 1.5rem;
 }
 #footer_contact {
@@ -238,7 +241,7 @@ html {
   font-family: "Comforter Brush";
   font-weight: 700;
   font-size: 1.5rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 7px;
   justify-content: center;
   align-items: center;
 }
