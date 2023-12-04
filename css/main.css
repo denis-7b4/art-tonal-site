@@ -18,7 +18,8 @@
 :root {
   --font-header-style: "Pacifico";
   --font-text-style: "Roboto Slab";
-  --header-bg-color: #9346A6;
+  --header-height: 12vh;
+  --footer-height:10vh;
 }
 html {
   width: 100%;
@@ -28,15 +29,15 @@ html {
   display: flex;
   position: fixed;
   width: 100%;
-  height: 16vh;
+  height: var(--header-height);
   top: 0;
   left: 0;
 }
 #top_panel {
   display: grid;
   width: 100%;
-  grid-template-columns: 2vw 15vw 1fr;
-  grid-template-rows: 16vh;
+  grid-template-columns: 5vw 15vw 1fr;
+  grid-template-rows: var(--header-height);
   grid-template-areas:
   "logo logo navbar";
 }
@@ -45,16 +46,15 @@ html {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: flex-end ;
+  justify-content: center;
   cursor: pointer;
-  background: var(--header-bg-color);
   background: content-box linear-gradient(90deg, #9346A6, #E396F6 30%);
   border-bottom: 8px solid #BBAACC;
 }
 #logo_click img {
   display: flex;
-  width: 239px;
-  height: 225px;
+  width: 200px;
+  height: 189px;
   padding-top: 10px;
 }
 .navbar {
@@ -80,6 +80,7 @@ html {
   list-style-type: none;
   padding: 15px;  
   border-radius: 10px;
+  transition: .5s linear;
 }
 .nav_wrap li:hover {
   box-shadow: 1px 1px 2px 0 #000000;
@@ -96,16 +97,16 @@ html {
 .container {
   display: flex;
   width: 100%;
-  min-height: 74vh;
-  margin-top: 16vh;
-  margin-bottom: 10vh;
+  min-height: calc(100vh - ((var(--header-height)) + (var(--footer-height))));
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
   background: center / cover url("/images/nausika_bg_big.jpg");
 }
 .content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 74vh;
+  min-height: calc(100vh - ((var(--header-height)) + (var(--footer-height))));
   height: fit-content;
   background: rgba(255, 255, 255, 0.85);
 }
@@ -118,7 +119,8 @@ html {
   line-height: 1.7rem;
 }
 #epi_txt {
-  margin-top: 5vh;
+  margin-top: 4vh;
+  margin-right: 1vw;
   color: #F52020;
   font-size: 1.5rem;
   font-style: italic;
@@ -131,7 +133,7 @@ html {
   font-weight: 600;
   letter-spacing: 0.1rem;
 }
-#red_c {
+.red_c {
   color: #F52020;
   font-size: 1.3em;
 }
@@ -139,17 +141,24 @@ html {
   color: #9346A6;
   font-size: 1.3em;
 }
+.content h1 {
+  color: #9346A6;
+  font-size: 3.4rem;
+  font-weight: 500;
+  letter-spacing: -2px;
+  margin: 5vh auto 0.1vh auto;
+  text-align: center;
+}
 .content p {
-  width: 80vw;
-  margin: 3vh auto;
+  width: 80%;
+  margin: auto;
   align-self: center;
   text-align: center;
   font-family: var(--font-text-style);
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 4.5rem;
-
-  /* color: #85a000; */
+  /* color: #85A000; */
 }
 
 /* Подвал */
@@ -161,14 +170,14 @@ html {
   width: 100%;
   border-top: 1px solid #000000;
   background: content-box linear-gradient(90deg, #ddddff, #bbaacc 30% 70%, #ddddff);
-  height: 10vh;
+  height: var(--footer-height);
 }
 .footer_wrap {
   display: grid;
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 40% 60%;
+  grid-template-rows: 30% 70%;
   grid-template-areas:
   "f-logo f-logo s-map-h s-map-h s-map-h f-addr-h f-addr-h f-addr-h f-cont f-cont f-cont f-cont"
   "f-logo f-logo s-map s-map s-map f-addr f-addr f-addr f-copy f-copy f-copy f-copy";
@@ -189,6 +198,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.9rem;
 }
 #s-map {
   grid-area: s-map;
@@ -196,9 +206,9 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  gap: 1.5vw;
+  gap: 3vw;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 #s-map div {
   display: flex;
@@ -216,6 +226,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.9rem;
 }
 #footer_addr {
   grid-area: f-addr;
@@ -240,7 +251,7 @@ html {
   display: flex;
   font-family: "Comforter Brush";
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 7px;
   justify-content: center;
   align-items: center;
@@ -248,7 +259,7 @@ html {
 #year {
   color: #9346A6;
 }
-#letter_d {
+#red_letter {
   color: #F52020;
 }
 #footer_copyrt::after {
@@ -257,31 +268,58 @@ html {
   font-weight: 900;
 }
 
+/* Медиа запросы */
+/* Для умеренно больших экранов */
 @media screen and (max-width: 1500px) {
   #top_panel {
     grid-template-columns: 10vw 15vw 1fr;
   }
+  #epigraph {
+    grid-template-columns: 65vw 35vw;
+    grid-template-columns: 70vw 30vw;
+  }
 }
+/* Для средних экранов */
 @media screen and (max-width: 1300px) {
+  #top_panel {
+    grid-template-columns: 9vw 15vw 1fr;
+  }
+  .nav_wrap ul {
+    gap: 3vw;
+  }
+  #epigraph {
+    grid-template-columns: 55vw 45vw;
+    grid-template-columns: 60vw 40vw;
+  }
+  .content p {
+    width: 97%;
+    font-size: 2rem;
+    line-height: 4rem;
+  }
   .footer_wrap {
     grid-template-areas:
-  "f-logo f-logo s-map-h s-map-h f-addr-h f-addr-h f-addr-h f-cont f-cont f-cont f-cont f-cont"
-  "f-logo f-logo s-map s-map f-addr f-addr f-addr f-copy f-copy f-copy f-copy f-copy";
+  "f-logo f-logo s-map-h s-map-h s-map-h f-addr-h f-addr-h f-cont f-cont f-cont f-cont f-cont"
+  "f-logo f-logo s-map s-map s-map f-addr f-addr f-copy f-copy f-copy f-copy f-copy";
   }
   #footer_contact {
     font-size: 1.2rem;
   }
 }
+/* Для различных Pad-ов */
 @media screen and (max-width: 1000px) {
-  #top_panel {
-    grid-template-columns: 9vw 15vw 1fr;
-  }
   #logo_click img {
     width: 180px;
-    height: 170px;
+    height: 171px;
   }
   .nav_wrap ul {
     gap: 0vw;
+  }
+  .nav_wrap li {
+    padding: 10px;
+  }
+  #epigraph {
+    grid-template-columns: 45vw 55vw;
+    grid-template-columns: 50vw 50vw;
   }
   #footer_addr {
     font-size: 1.1rem;
@@ -289,7 +327,9 @@ html {
   }
   #s-map {
     line-height: 1.3;
-    gap: 0.7vw;
+  }
+  #footer_addr {
+    font-size: 1rem;
   }
   #footer_contact {
     font-size: 1rem;
@@ -299,6 +339,11 @@ html {
     letter-spacing: 3px;
   }
 }
+/* Для средних смартфонов */
 @media screen and (max-width: 800px) {
+  
+}
+/* Для мелких (eXtra Small) смартфонов */
+@media screen and (max-width: 320px) {
   
 }
