@@ -68,6 +68,23 @@ html {
   justify-content: center;
   align-items: center;
 }
+input[type="checkbox"] {
+  display: none;
+}
+.nav_wrap label {
+  display: none;
+  padding: 15px;  
+  border-radius: 10px;
+  color: #DDDDDD;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px #000000;
+  transition: .2s linear;
+  cursor: pointer;
+}
+.nav_wrap label:hover {
+  box-shadow: 2px 2px 4px 0 #000000;
+  color: #FFFFFF;
+}
 .nav_wrap ul {
   display: flex;
   position: relative;
@@ -79,10 +96,10 @@ html {
   list-style-type: none;
   padding: 15px;  
   border-radius: 10px;
-  transition: .5s linear;
+  transition: .2s linear;
 }
 .nav_wrap li:hover {
-  box-shadow: 1px 1px 2px 0 #000000;
+  box-shadow: 2px 2px 4px 0 #000000;
 }
 .nav_wrap a {
   text-decoration: none;
@@ -150,7 +167,7 @@ html {
 }
 .content p {
   width: 80%;
-  margin: auto;
+  margin: 3vh auto;
   align-self: center;
   text-align: center;
   font-size: 2.5rem;
@@ -356,8 +373,31 @@ html {
     width: 100px;
     height: 105px;
   }
-  .nav_wrap {
+  .nav_wrap label {
+    display: flex;
+  }
+  .nav_wrap > ul {
     display: none;
+    left: 50vw;
+    right: 5vw;
+  }
+  .nav_wrap li {
+    display: flex;
+    padding: 5px;
+  }
+  .nav_wrap li a {
+    padding-left: 10px;
+  }
+  input[type="checkbox"]:checked ~ label + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    background: rgba(147, 70, 166, 0.95);
+    padding: 10px;
+    border: 1px solid #000000;
+    box-shadow: 1px 2px 5px #000000;
+    border-radius: 10px;
   }
   .container {
     margin-bottom: 0;
@@ -406,6 +446,7 @@ html {
   }
   #footer_copyrt {
     padding: 10px;
+    font-size: 1.2rem;
   }
 }
 /* Для мелких (eXtra Small) смартфонов */
@@ -413,6 +454,12 @@ html {
   #logo_click img {
     width: 80px;
     height: 85px;
+  }
+  .nav_wrap label {
+    padding: 5px;
+  }
+  .nav_wrap > ul {
+    left: 40vw;
   }
   .content h1 {
     font-size: 2rem;
