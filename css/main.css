@@ -16,10 +16,9 @@
   src: url(/fonts/Pacifico-Regular.ttf);
 }
 :root {
-  --font-header-style: "Pacifico";
-  --font-text-style: "Roboto Slab";
   --header-height: 12vh;
   --footer-height:10vh;
+  --content-min-height: calc(100vh - ((var(--header-height)) + (var(--footer-height))));
 }
 html {
   width: 100%;
@@ -97,7 +96,7 @@ html {
 .container {
   display: flex;
   width: 100%;
-  min-height: calc(100vh - ((var(--header-height)) + (var(--footer-height))));
+  min-height: var(--content-min-height);
   margin-top: var(--header-height);
   margin-bottom: var(--footer-height);
   background: center / cover url("/images/nausika_bg_big.jpg");
@@ -106,7 +105,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: calc(100vh - ((var(--header-height)) + (var(--footer-height))));
+  min-height: var(--content-min-height);
   height: fit-content;
   background: rgba(255, 255, 255, 0.85);
 }
@@ -154,7 +153,6 @@ html {
   margin: auto;
   align-self: center;
   text-align: center;
-  font-family: var(--font-text-style);
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 4.5rem;
@@ -193,32 +191,32 @@ html {
   width: 80px;
   height: 75px;
 }
-#s-map-h {
+#site_map_header {
   grid-area: s-map-h;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
 }
-#s-map {
+#site_map {
   grid-area: s-map;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  gap: 3vw;
+  gap: 1.5vw;
   font-size: 0.9rem;
   line-height: 1.3;
 }
-#s-map div {
+#site_map div {
   display: flex;
   flex-direction: column;
 }
-#s-map a {
+#site_map a {
   text-decoration: none;
   color: #444444;
 }
-#s-map a:hover {
+#site_map a:hover {
   text-decoration: underline;
 }
 #footer_addr_h {
@@ -252,6 +250,7 @@ html {
   font-family: "Comforter Brush";
   font-weight: 700;
   font-size: 1.3rem;
+  text-shadow: 1px 1px #FFFFFF;
   letter-spacing: 7px;
   justify-content: center;
   align-items: center;
@@ -279,7 +278,7 @@ html {
     grid-template-columns: 70vw 30vw;
   }
 }
-/* Для средних экранов */
+/* Для мелких экранов */
 @media screen and (max-width: 1300px) {
   #top_panel {
     grid-template-columns: 9vw 15vw 1fr;
@@ -300,6 +299,9 @@ html {
     grid-template-areas:
   "f-logo f-logo s-map-h s-map-h s-map-h f-addr-h f-addr-h f-cont f-cont f-cont f-cont f-cont"
   "f-logo f-logo s-map s-map s-map f-addr f-addr f-copy f-copy f-copy f-copy f-copy";
+  }
+  #site_map {
+    gap: 3vw;
   }
   #footer_contact {
     font-size: 1.2rem;
@@ -325,9 +327,6 @@ html {
     font-size: 1.1rem;
     line-height: 1.2;
   }
-  #s-map {
-    line-height: 1.3;
-  }
   #footer_addr {
     font-size: 1rem;
   }
@@ -339,11 +338,108 @@ html {
     letter-spacing: 3px;
   }
 }
-/* Для средних смартфонов */
+/* Для мелких Pad-ов */
 @media screen and (max-width: 800px) {
-  
+  .content h1 {
+    font-size: 3rem;
+  }
+  .content p {
+    line-height: 3rem;
+  }
+}
+/* Для средних смартфонов */
+@media screen and (max-width: 767px) {
+  #top_panel {
+    grid-template-columns: 15vw 20vw 1fr;
+  }
+  #logo_click img {
+    width: 100px;
+    height: 105px;
+  }
+  .nav_wrap {
+    display: none;
+  }
+  .container {
+    margin-bottom: 0;
+  }
+  .content {
+    margin-bottom: 0;
+  }
+  #epigraph {
+    display: none;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 5vh;
+  }
+  .footer {
+    position: static;
+    height: fit-content;
+    min-height: fit-content;
+  }
+  .footer_wrap {
+    grid-template-columns: repeat(2, 12vw) repeat(4, 1fr);
+    grid-template-rows: minmax(4vh, max-content);
+    grid-template-areas:
+    "f-logo f-logo s-map-h s-map-h f-addr-h f-addr-h"
+    "f-logo f-logo s-map s-map f-addr f-addr"
+    "f-cont f-cont f-cont f-cont f-cont f-cont"
+    "f-copy f-copy f-copy f-copy f-copy f-copy";
+  }
+  #footer_logo {
+    border-bottom: 1px solid #000000;
+  }
+  #site_map {
+    justify-content: space-evenly;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+  }
+  #footer_addr {
+    border-bottom: 1px solid #000000;
+  }
+  #footer_contact {
+    padding: 5px;
+  }
+  #footer_copyrt {
+    padding: 10px;
+  }
 }
 /* Для мелких (eXtra Small) смартфонов */
-@media screen and (max-width: 320px) {
-  
+@media screen and (max-width: 375px) {
+  #logo_click img {
+    width: 80px;
+    height: 85px;
+  }
+  .content h1 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1.2rem;
+  }
+  .footer_wrap {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: minmax(4vh, max-content);
+    grid-template-areas:
+    "f-logo s-map-h"
+    "f-logo s-map"
+    "f-addr-h f-addr-h"
+    "f-addr f-addr"
+    "f-cont f-cont"
+    "f-copy f-copy";
+  }
+  #footer_logo {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  #site_map {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  #footer_addr {
+    padding-bottom: 5px;
+  }
 }
