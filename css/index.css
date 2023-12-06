@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  width: 100%;
+  min-height: var(--content-min-height);
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
+  background: center / cover url("/images/nausika_bg_big.jpg");
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: var(--content-min-height);
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.85);
+}
+#epigraph {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 70vw 30vw;
+  grid-template-columns: 75vw 25vw;
+  font-family: 'Pacifico';
+  line-height: 1.7rem;
+}
+#epi_txt {
+  margin-top: 4vh;
+  margin-right: 1vw;
+  color: #F52020;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+#epi_cit {
+  margin-top: 1vh;
+  text-align: center;
+  color: #9346A6;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.red_c {
+  color: #F52020;
+  font-size: 1.3em;
+}
+#lilac_c {
+  color: #9346A6;
+  font-size: 1.3em;
+}
+.content h1 {
+  color: #9346A6;
+  font-size: 3.4rem;
+  font-weight: 500;
+  letter-spacing: -2px;
+  margin: 5vh auto 0.1vh auto;
+  text-align: center;
+}
+.content p {
+  width: 80%;
+  margin: 3vh auto;
+  align-self: center;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 4.5rem;
+  /* color: #85A000; */
+}

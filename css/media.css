@@ -1,0 +1,208 @@
+/* Медиа запросы */
+/* Для умеренно больших экранов */
+@media screen and (max-width: 1500px) {
+  #top_panel {
+    grid-template-columns: 10vw 15vw 1fr;
+  }
+  #epigraph {
+    grid-template-columns: 65vw 35vw;
+    grid-template-columns: 70vw 30vw;
+  }
+}
+/* Для мелких экранов */
+@media screen and (max-width: 1300px) {
+  #top_panel {
+    grid-template-columns: 9vw 15vw 1fr;
+  }
+  .nav_wrap ul {
+    gap: 3vw;
+  }
+  #epigraph {
+    grid-template-columns: 55vw 45vw;
+    grid-template-columns: 60vw 40vw;
+  }
+  .content p {
+    width: 97%;
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  .footer_wrap {
+    grid-template-areas:
+  "f-logo f-logo s-map-h s-map-h s-map-h f-addr-h f-addr-h f-cont f-cont f-cont f-cont f-cont"
+  "f-logo f-logo s-map s-map s-map f-addr f-addr f-copy f-copy f-copy f-copy f-copy";
+  }
+  #site_map {
+    gap: 3vw;
+  }
+  #footer_contact {
+    font-size: 1.2rem;
+  }
+}
+/* Для различных Pad-ов */
+@media screen and (max-width: 1000px) {
+  #logo_click img {
+    width: 180px;
+    height: 180px;
+  }
+  .nav_wrap ul {
+    gap: 0vw;
+  }
+  .nav_wrap li {
+    padding: 10px;
+  }
+  #epigraph {
+    grid-template-columns: 45vw 55vw;
+    grid-template-columns: 50vw 50vw;
+  }
+  #footer_addr {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  #footer_addr {
+    font-size: 1rem;
+  }
+  #footer_contact {
+    font-size: 1rem;
+  }
+  #footer_copyrt {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+}
+/* Для мелких Pad-ов */
+@media screen and (max-width: 800px) {
+  .content h1 {
+    font-size: 3rem;
+  }
+  .content p {
+    line-height: 3rem;
+  }
+}
+/* Для средних смартфонов */
+@media screen and (max-width: 767px) {
+  #top_panel {
+    grid-template-columns: 15vw 20vw 1fr;
+  }
+  #logo_click img {
+    width: 120px;
+    height: 122px;
+  }
+  .nav_wrap label {
+    display: flex;
+  }
+  .nav_wrap > ul {
+    display: none;
+    left: 50vw;
+    right: 5vw;
+  }
+  .nav_wrap li {
+    display: flex;
+    padding: 5px;
+  }
+  .nav_wrap li a {
+    padding-left: 10px;
+  }
+  input[type="checkbox"]:checked ~ label + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    background: rgba(147, 70, 166, 0.95);
+    padding: 10px;
+    border: 1px solid #000000;
+    box-shadow: 1px 2px 5px #000000;
+    border-radius: 10px;
+  }
+  .container {
+    margin-bottom: 0;
+  }
+  .content {
+    margin-bottom: 0;
+  }
+  #epigraph {
+    display: none;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 5vh;
+  }
+  .footer {
+    position: static;
+    height: fit-content;
+    min-height: fit-content;
+  }
+  .footer_wrap {
+    grid-template-columns: repeat(2, 12vw) repeat(4, 1fr);
+    grid-template-rows: minmax(4vh, max-content);
+    grid-template-areas:
+    "f-logo f-logo s-map-h s-map-h f-addr-h f-addr-h"
+    "f-logo f-logo s-map s-map f-addr f-addr"
+    "f-cont f-cont f-cont f-cont f-cont f-cont"
+    "f-copy f-copy f-copy f-copy f-copy f-copy";
+  }
+  #footer_logo {
+    border-bottom: 1px solid #000000;
+  }
+  #site_map {
+    justify-content: space-evenly;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+  }
+  #footer_addr {
+    border-bottom: 1px solid #000000;
+  }
+  #footer_contact {
+    padding: 5px;
+  }
+  #footer_copyrt {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+}
+/* Для мелких (eXtra Small) смартфонов */
+@media screen and (max-width: 375px) {
+  #logo_click img {
+    width: 80px;
+    height: 85px;
+    padding-top: 5px;
+    
+  }
+  .nav_wrap label {
+    padding: 5px;
+  }
+  .nav_wrap > ul {
+    left: 40vw;
+  }
+  .content h1 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1.2rem;
+  }
+  .footer_wrap {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: minmax(4vh, max-content);
+    grid-template-areas:
+    "f-logo s-map-h"
+    "f-logo s-map"
+    "f-addr-h f-addr-h"
+    "f-addr f-addr"
+    "f-cont f-cont"
+    "f-copy f-copy";
+  }
+  #footer_logo {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  #site_map {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  #footer_addr {
+    padding-bottom: 5px;
+  }
+}

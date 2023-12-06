@@ -1,0 +1,86 @@
+#header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  top: 0;
+  left: 0;
+}
+#top_panel {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 5vw 15vw 1fr;
+  grid-template-rows: var(--header-height);
+  grid-template-areas:
+  "logo logo navbar";
+}
+#logo_click {
+  grid-area: logo;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  cursor: pointer;
+  background: content-box linear-gradient(90deg, #9346A6, #E396F6 30%);
+  border-bottom: 8px solid #BBAACC;
+}
+#logo_click img {
+  display: flex;
+  width: 200px;
+  height: 195px;
+  padding-top: 10px;
+}
+.navbar {
+  grid-area: navbar;
+  background: content-box linear-gradient(90deg, #E396F6, #9346A6 20%);
+  border-bottom: 8px solid #BBAACC;
+}
+.nav_wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.nav_wrap label {
+  display: none;
+  padding: 15px;  
+  border-radius: 10px;
+  color: #DDDDDD;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px #000000;
+  transition: .2s linear;
+  cursor: pointer;
+}
+.nav_wrap label:hover {
+  box-shadow: 2px 2px 4px 0 #000000;
+  color: #FFFFFF;
+}
+.nav_wrap ul {
+  display: flex;
+  position: relative;
+  left: -5vw;
+  gap: 5vw;
+}
+.nav_wrap li {
+  display: flex;
+  list-style-type: none;
+  padding: 15px;  
+  border-radius: 10px;
+  transition: .2s linear;
+}
+.nav_wrap li:hover {
+  box-shadow: 2px 2px 4px 0 #000000;
+}
+.nav_wrap a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #DDDDDD;
+  text-shadow: 2px 2px #000000;
+}
+.nav_wrap a:hover {
+  color: #FFFFFF;
+}
