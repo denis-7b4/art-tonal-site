@@ -1,0 +1,15 @@
+@import url("/css/main.css");
+@import url("/css/header.css");
+@import url("/css/footer.css");
+.container {
+  display: flex;
+  width: 100%;
+  margin-top: var(--header-height);
+  min-height: var(--content-min-height);
+  margin-bottom: var(--footer-height);
+}
+.content {
+  display: flex;
+  width: inherit;
+  justify-content: center;
+}
