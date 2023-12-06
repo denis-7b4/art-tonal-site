@@ -53,7 +53,7 @@ html {
 #logo_click img {
   display: flex;
   width: 200px;
-  height: 189px;
+  height: 195px;
   padding-top: 10px;
 }
 .navbar {
@@ -328,7 +328,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 1000px) {
   #logo_click img {
     width: 180px;
-    height: 171px;
+    height: 180px;
   }
   .nav_wrap ul {
     gap: 0vw;
@@ -370,8 +370,8 @@ input[type="checkbox"] {
     grid-template-columns: 15vw 20vw 1fr;
   }
   #logo_click img {
-    width: 100px;
-    height: 105px;
+    width: 120px;
+    height: 122px;
   }
   .nav_wrap label {
     display: flex;
@@ -454,6 +454,8 @@ input[type="checkbox"] {
   #logo_click img {
     width: 80px;
     height: 85px;
+    padding-top: 5px;
+    
   }
   .nav_wrap label {
     padding: 5px;
