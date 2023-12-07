@@ -9,7 +9,9 @@
     grid-template-columns: 70vw 30vw;
   }
 }
+/**/
 /* Для мелких экранов */
+/**/
 @media screen and (max-width: 1300px) {
   #top_panel {
     grid-template-columns: 9vw 15vw 1fr;
@@ -21,11 +23,43 @@
     grid-template-columns: 55vw 45vw;
     grid-template-columns: 60vw 40vw;
   }
-  .content p {
+  .main_txt {
     width: 97%;
     font-size: 2rem;
     line-height: 4rem;
   }
+  /* Услуги  (начало)*/
+  .service_header {
+    font-size: 1.7rem;
+  }
+  .content h3 {
+    font-size: 2.7rem;
+  }
+  .form p {
+    font-size: 1rem;
+  }
+  .slogan {
+    font-size: 2.5rem;
+  }
+  .input_field input {
+    font-size: 1rem;
+  }
+  .comment textarea {
+    font-size: 0.9rem;
+  }
+  .send_button {
+    margin: 3% 5% 0 5%;
+  }
+  /* Услуги (конец) */
+  /* Контакты (начало) */
+  .contacts_block {
+    flex-direction: column;
+  }
+  .map_block iframe {
+    width: 97vw;
+    height: 55vw;
+  }
+  /* Контакты (конец) */
   .footer_wrap {
     grid-template-areas:
   "f-logo f-logo s-map-h s-map-h s-map-h f-addr-h f-addr-h f-cont f-cont f-cont f-cont f-cont"
@@ -38,7 +72,9 @@
     font-size: 1.2rem;
   }
 }
+/**/
 /* Для различных Pad-ов */
+/**/
 @media screen and (max-width: 1000px) {
   #logo_click img {
     width: 180px;
@@ -54,6 +90,24 @@
     grid-template-columns: 45vw 55vw;
     grid-template-columns: 50vw 50vw;
   }
+  .works_gallery {
+    width: 100%;
+  }
+  /* Услуги (начало) */
+  .service_block {
+    grid-template-columns: 35% 65%;
+  }
+  .slogan {
+    font-size: 2rem;
+    align-items: flex-start;
+  }
+  .form_end {
+    flex-direction: column;
+  }
+  .send_button {
+    margin: 10% auto;
+  }
+  /* Услуги (конец) */
   #footer_addr {
     font-size: 1.1rem;
     line-height: 1.2;
@@ -69,16 +123,26 @@
     letter-spacing: 3px;
   }
 }
+/**/
 /* Для мелких Pad-ов */
+/**/
 @media screen and (max-width: 800px) {
   .content h1 {
     font-size: 3rem;
   }
-  .content p {
+  .main_txt {
     line-height: 3rem;
   }
+  /* Контакты (начало) */
+  .map_block iframe {
+    width: 97vw;
+    height: 50vw;
+  }
+  /* Контакты (конец) */
 }
+/**/
 /* Для средних смартфонов */
+/**/
 @media screen and (max-width: 767px) {
   #top_panel {
     grid-template-columns: 15vw 20vw 1fr;
@@ -102,7 +166,7 @@
   .nav_wrap li a {
     padding-left: 10px;
   }
-  input[type="checkbox"]:checked ~ label + ul {
+  .nav_wrap input[type="checkbox"]:checked ~ label + ul {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -125,11 +189,54 @@
   .content h1 {
     font-size: 2.5rem;
   }
-  .content p {
+  .main_txt {
     font-size: 1.5rem;
     line-height: 2.5rem;
     margin-bottom: 5vh;
   }
+  /* Услуги (начало) */
+  .content h3 {
+    font-size: 2rem;
+  }
+  .service_block {
+    grid-template-columns: 97%;
+  }
+  .slogan {
+    font-size: 0.5rem;
+    line-height: 1;
+  }
+  .service_form {
+    padding: 1%;
+    text-align: center;
+  }
+  form {
+    justify-content: center;
+    align-items: center;
+  }
+  .what_paint {
+    justify-content: center;
+    align-items: center;
+  }
+  .how_connect {
+    justify-content: center;
+    align-items: center;
+  }
+  .email_name {
+    flex-direction: column;
+  }
+  .input_field input {
+    padding: 5%;
+  }
+  /* Услуги (конец) */
+  /* Контакты (начало) */
+  .contacts {
+    font-size: 2rem;
+  }
+  .map_block iframe {
+    width: 97vw;
+    height: 65vw;
+  }
+  /* Контакты (конец) */
   .footer {
     position: static;
     height: fit-content;
@@ -163,7 +270,9 @@
     font-size: 1.2rem;
   }
 }
+/**/
 /* Для мелких (eXtra Small) смартфонов */
+/**/
 @media screen and (max-width: 375px) {
   #logo_click img {
     width: 80px;
@@ -180,9 +289,18 @@
   .content h1 {
     font-size: 2rem;
   }
-  .content p {
+  .main_txt {
     font-size: 1.2rem;
   }
+  /* Контакты (начало) */
+  .contacts {
+    font-size: 1.5rem;
+  }
+  .map_block iframe {
+    width: 97vw;
+    height: 55vw;
+  }
+  /* Контакты (конец) */
   .footer_wrap {
     grid-template-columns: 30% 70%;
     grid-template-rows: minmax(4vh, max-content);

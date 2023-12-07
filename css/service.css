@@ -7,9 +7,169 @@
   margin-top: var(--header-height);
   min-height: var(--content-min-height);
   margin-bottom: var(--footer-height);
+  background: #EEEEEE;
 }
 .content {
   display: flex;
+  flex-direction: column;
   width: inherit;
+  min-height: 100%;
+  margin: 5vh 0;
+}
+.service_header {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
   justify-content: center;
+  color: #9346A6;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: .3s;
+}
+.service_header:hover {
+  transform: rotate(-10deg);
+}
+.content h3 {
+  margin: 0 auto;
+  padding: 10px 0 20px 0;
+  font-size: 3rem;
+  text-align: center;
+}
+.red_c {
+  color: #F52020;
+}
+.service_block {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 40% 60%;
+}
+.slogan {
+  display: flex;
+  width: 100%;
+  min-height: available;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.sevice_form {
+  display: flex;
+  width: 100%;
+  min-height: available;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+form p {
+  margin-top: 2%;
+  font-size: 1.3rem;font-weight: 500;
+}
+.what_paint {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.form_button {
+  margin: 2% 3%;
+}
+.form_button input[type="radio"] {
+  display: none;
+}
+.form_button label {
+  box-shadow: 2px 2px 5px 0 #000000;
+  border-radius: 10px;
+  margin: 5%;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.form_button label:hover {
+  background: #FFFFFF;
+}
+.form_button input[type="radio"]:checked ~ label {
+  background: #BBAACC;
+}
+.form_button input[type="radio"]:checked:hover ~ label {
+  background: #CBBADC;
+}
+.how_connect {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.email_name {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.input_field input,
+.comment textarea {
+  background: #EEEEEE;
+}
+.input_field input:focus {
+  outline: none;
+}
+.input_field input {
+  border: none;
+  padding-bottom: 5px;
+  font-size: 1.3rem;
+}
+.input_field {
+  margin: 3% 5% 0 0;
+  border-bottom: 1px solid #000000;
+}
+.form_end {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.comment {
+  display: flex;
+  height: fit-content;
+  margin-top: 5%;
+}
+.comment textarea {
+  resize: none;
+  outline: none;
+  border: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000000;
+  font-size: 1rem;
+}
+.send_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 10% 0 10%;
+  align-self: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  /* border: 1px solid #000000; */
+  box-shadow: 1px 1px 5px 0 #000000;
+  background: #9346A6;
+}
+.send_button:hover {
+  box-shadow: 4px 4px 10px 0 #000000;
+}
+.send_button button {
+  outline: none;
+  border: none;
+  padding: 0;
+  background: rgba(221, 221, 221, 0);
+  color: #FFFFFF;
+  width: 85px;
+  height: 85px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.send_button button:disabled {
+  cursor: not-allowed;
 }

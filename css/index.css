@@ -66,3 +66,6 @@
   line-height: 4.5rem;
   /* color: #85A000; */
 }
+.main_txt a {
+  text-decoration: none;
+}

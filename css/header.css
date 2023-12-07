@@ -42,7 +42,7 @@
   justify-content: center;
   align-items: center;
 }
-input[type="checkbox"] {
+.nav_wrap input[type="checkbox"] {
   display: none;
 }
 .nav_wrap label {
