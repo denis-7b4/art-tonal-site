@@ -90,6 +90,9 @@
     grid-template-columns: 45vw 55vw;
     grid-template-columns: 50vw 50vw;
   }
+  .main_txt {
+    line-height: 3.5rem;
+  }
   .works_gallery {
     width: 100%;
   }
