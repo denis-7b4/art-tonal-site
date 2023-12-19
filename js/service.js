@@ -3,7 +3,7 @@ let nameFieldValid = false;
 
 const emailButton = document.getElementById("email_btn");
 const phoneButton = document.getElementById("phone_btn");
-const emailPhoneField = document.getElementById("email_phone");
+const emailPhoneField = document.getElementById("email_phone_field");
 const nameField = document.getElementById("name");
 const sendButton = document.getElementById("send_btn");
 

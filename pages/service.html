@@ -22,7 +22,6 @@
             <ul>
               <li><a href="/pages/works.html">РАБОТЫ</a></li>
               <li><a href="#">УСЛУГИ</a></li>
-              <li><a href="/pages/fair.html">МАГАЗИН</a></li>
               <li><a href="/pages/about.html">О НАС</a></li>
               <li><a href="/pages/contacts.html">КОНТАКТЫ</a></li>
             </ul>
@@ -40,32 +39,32 @@
         <div class="service_block">
           <div class="slogan"><h1>Будем<br><span class="red_c">красить</span></h1></div>
           <div class="service_form">
-            <form name="feedback">
+            <form name="feedback" action="/pages/action.php" method="post">
               <p>Что красим</p>
               <div class="what_paint">
                 <div class="form_button">
-                  <input type="radio" name="what_paint_btn" id="furniture_btn" checked>
+                  <input type="radio" name="what_paint_btn" id="furniture_btn" value="furniture" checked>
                   <label for="furniture_btn">Мебель</label>
                 </div>
                 <div class="form_button">
-                  <input type="radio" name="what_paint_btn" id="wall_btn">
+                  <input type="radio" name="what_paint_btn" value="walls" id="wall_btn">
                   <label for="wall_btn">Стены</label>
                 </div>
               </div>
               <p>Как с Вами связаться</p>
               <div class="how_connect">
                 <div class="form_button">
-                  <input type="radio" name="email_phone" id="email_btn" checked>
+                  <input type="radio" name="email_phone" id="email_btn" value="email" checked>
                   <label for="email_btn">E&#8209;mail</label>
                 </div>
                 <div class="form_button">
-                  <input type="radio" name="email_phone" id="phone_btn">
+                  <input type="radio" name="email_phone" id="phone_btn" value="phone">
                   <label for="phone_btn">Телефон</label>
                 </div>
               </div>
               <div class="email_name">
                 <div class="input_field">
-                  <input type="email" name="email_phone" id="email_phone" placeholder="* E-mail" required>
+                  <input type="email" name="email_phone_field" id="email_phone_field" placeholder="* E-mail" required>
                 </div>
                 <div class="input_field">
                   <input type="text" name="name" id="name" placeholder="* Как к Вам обращаться" required>
@@ -95,7 +94,6 @@
           <div>
             <a href="/pages/works.html">Работы</a>
             <a href="#">Услуги</a>
-            <a href="/pages/fair.html">Магазин</a>
           </div>
           <div>
             <a href="/pages/about.html">О нас</a>
