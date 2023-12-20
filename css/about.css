@@ -7,9 +7,25 @@
   margin-top: var(--header-height);
   min-height: var(--content-min-height);
   margin-bottom: var(--footer-height);
+  background: #EEEEEE;
 }
 .content {
   display: flex;
+  flex-direction: column;
   width: inherit;
+  min-height: 100%;
+  margin: 5vh 0;
+}
+.about_header {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
   justify-content: center;
+  color: #9346A6;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: .3s;
+}
+.about_header:hover {
+  transform: rotate(-10deg);
 }
