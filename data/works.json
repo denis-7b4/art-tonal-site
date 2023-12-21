@@ -1,90 +1,25 @@
 [
   {
     "id": "stool_01",
-    "thumbs":
-    [
-      "/images/stool_01_01",
-      "/images/stool_01_02",
-      "/images/stool_01_03"
-    ],
-    "image": "/images/stool_01_now_small.png",
+    "gallery":
+      [
+        {
+          "img": "/images/stool_01_01_small.png",
+          "img_big": "/images/stool_01_01_big.jpg",
+          "title": "До реставрации"
+        },
+        {
+          "img": "/images/stool_01_02_small.png",
+          "img_big": "/images/stool_01_02_big.png",
+          "title": "После реставрации"
+        },
+        {
+          "img": "/images/stool_01_03_small.png",
+          "img_big": "/images/stool_01_03_big.jpg",
+          "title": "После реставрации (фрагмент росписи)"
+        }
+      ],
+    "image": "/images/stool_01_02_small.png",
     "title": "Венский табурет с ручной росписью"
-  },
-  {
-    "id": "bureau_01",
-    "thumbs":
-    [
-      "/images/bureau_01_01",
-      "/images/bureau_01_02",
-      "/images/bureau_01_03"
-    ],
-    "image": "/images/bureau_01_now_small.png",
-    "title": "Роспись стола 50-х годов (фрагмент)"
-  },
-  {
-    "id": "wardrobe_02",
-    "thumbs":
-    [
-      "/images/wardrobe_02_01",
-      "/images/wardrobe_02_02",
-      "/images/wardrobe_02_03"
-    ],
-    "image": "/images/wardrobe_02_now_small_01.png",
-    "title": "Роспись шкафа в детской"
-  },
-  {
-    "id": "wardrobe_01",
-    "thumbs":
-    [
-      "/images/wardrobe_01_01",
-      "/images/wardrobe_01_02",
-      "/images/wardrobe_01_03"
-    ],
-    "image": "/images/wardrobe_01_now_small.png",
-    "title": "Деревенский шкаф"
-  },
-  {
-    "id": "wall_01",
-    "thumbs":
-    [
-      "/images/wall_01_01",
-      "/images/wall_01_02",
-      "/images/wall_01_03"
-    ],
-    "image": "/images/wall_01_small.png",
-    "title": "Настенная калиграфия"
-  },
-  {
-    "id": "wall_kg_01",
-    "thumbs":
-    [
-      "/images/wall_kg_01_01",
-      "/images/wall_kg_01_02",
-      "/images/wall_kg_01_03"
-    ],
-    "image": "/images/wall_kg_01_small.png",
-    "title": "Роспись стены в д/c 77 (п.Привилегия)"
-  },
-  {
-    "id": "wall_kg_02",
-    "thumbs":
-    [
-      "/images/wall_kg_02_01",
-      "/images/wall_kg_02_02",
-      "/images/wall_kg_02_03"
-    ],
-    "image": "/images/wall_kg_02_small.png",
-    "title": "Роспись стены в д/c 77 (п.Привилегия)"
-  },
-  {
-    "id": "wall_kg_00",
-    "thumbs":
-    [
-      "/images/wall_kg_00_01",
-      "/images/wall_kg_00_02",
-      "/images/wall_kg_00_03"
-    ],
-    "image": "/images/wall_kg_00_small.png",
-    "title": "Роспись стен в д/c 77 (п.Привилегия)"
   }
 ]
