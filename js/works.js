@@ -37,26 +37,38 @@ deployCards(works);
 //
 //
 const popup = document.querySelector(".popup");
+const popupWindow = document.querySelector(".popup_container");
 const popupClose = document.querySelector("#popup_close");
 const body = document.body;
 const popupTitle = document.querySelector(".popup_title").querySelector("h3");
 const popupSidebar = document.querySelector(".popup_sidebar");
 const bigImg = document.querySelector(".big_img");
-let divGallery;
-let galleryBigImage;
+let divGallery; /* Handler галереи thumbnail-ов для удаления при очистке popup-а */
+let galleryBigImage; /* Handler большого изображения для удаления при очистке popup-а */
+let imgThumbPrev; /* Handler предыдущего активного thumbnail для установки неактивности */
 
 function openPopup(thing) {
   fillMiniGallery(thing);
   popup.classList.add("popup_open");
   body.classList.add("lock");
 }
-// popup.addEventListener("click", (e) => {
-  //   e.preventDefault();
-  //   popup.classList.remove("popup_open");
-  //   body.classList.remove("lock");
-  //   divGallery.remove();
-  // });
-  // ЗАТЕМНЕНИЕ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+popup.addEventListener("click", (e) => {
+    e.preventDefault();
+    const withinBoundaries = e.composedPath().includes(popupWindow);
+    if (!withinBoundaries) {
+      closePopup();
+    }
+});
+popupClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  closePopup();
+})
+function closePopup() {
+  popup.classList.remove("popup_open");
+  body.classList.remove("lock");
+  divGallery.remove();
+  galleryBigImage.remove();
+}
 function fillMiniGallery(thing) {
   let gallery = thing.gallery;
   divGallery = document.createElement("div");
@@ -78,6 +90,11 @@ function fillMiniGallery(thing) {
       e.preventDefault();
       popupTitle.textContent = thing.title + '. ' + thumb.title + '.';
       galleryBigImage.src = thumb.img_big;
+      if (imgThumbPrev) {
+        imgThumbPrev.style.border = "none";
+      }
+      imgThumbPrev = imgThumb;
+      imgThumb.style.border = "1px solid #F52020";
     })
   }
   document.getElementById("gallery").firstElementChild.click();
