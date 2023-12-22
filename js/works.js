@@ -94,7 +94,7 @@ function fillMiniGallery(thing) {
         imgThumbPrev.style.border = "none";
       }
       imgThumbPrev = imgThumb;
-      imgThumb.style.border = "1px solid #F52020";
+      imgThumb.style.border = "2px solid #F52020";
     })
   }
   document.getElementById("gallery").firstElementChild.click();
