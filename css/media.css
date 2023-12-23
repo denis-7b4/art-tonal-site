@@ -28,6 +28,11 @@
     font-size: 2rem;
     line-height: 4rem;
   }
+  /* Работы (начало) */
+  .popup_container {
+    width: 95vw;
+  }
+  /* Работы (конец) */
   /* Услуги  (начало)*/
   .service_header {
     font-size: 1.7rem;
@@ -93,9 +98,48 @@
   .main_txt {
     line-height: 3.5rem;
   }
+  /* Работы (начало) */
   .works_gallery {
     width: 100%;
   }
+  .title_wrapper {
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 100%;
+    height: 10%;
+  }
+  .popup_content {
+    flex-direction: column-reverse;
+    height: 93%;
+  }
+  .popup_main {
+    height: 80%;
+  }
+  .popup_sidebar {
+    flex-direction: row;
+    max-width: 100%;
+    height: 20%;
+    justify-content: center;
+    margin-left: 0;
+    padding-bottom: 0;
+  }
+  #gallery {
+    flex-direction: row;
+    width: 90%;
+    border-right: none;
+    border-top: 1px solid #000000;
+    justify-content: space-around;
+    overflow-x: scroll;
+  }
+  .thumb {
+    display: flex;
+    min-width: 0;
+    max-width: 13%;
+  }
+  #gallery img {
+    height: 100%;
+    width: auto;
+  }
+  /* Работы (конец) */
   /* Услуги (начало) */
   .service_block {
     grid-template-columns: 35% 65%;

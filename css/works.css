@@ -89,8 +89,9 @@
 }
 .title_wrapper {
   display: grid;
+  height: 5%;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 5%;
+  grid-template-rows: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -110,6 +111,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  height: 100%;
 }
 .popup_content {
   display: flex;
@@ -126,7 +129,7 @@
 }
 .popup_main {
   display: flex;
-  width: 85%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
