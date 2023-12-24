@@ -105,19 +105,21 @@
   .title_wrapper {
     grid-template-columns: 10% 1fr 10%;
     grid-template-rows: 100%;
-    height: 10%;
+    height: 10vh;
+    line-height: 1;
   }
   .popup_content {
     flex-direction: column-reverse;
     height: 93%;
   }
   .popup_main {
-    height: 80%;
+    height: 70vh;
+    max-height: 80%;
   }
   .popup_sidebar {
     flex-direction: row;
     max-width: 100%;
-    height: 20%;
+    height: 20vh;
     justify-content: center;
     margin-left: 0;
     padding-bottom: 0;
@@ -132,8 +134,7 @@
   }
   .thumb {
     display: flex;
-    min-width: 0;
-    max-width: 13%;
+    min-width: 13%;
   }
   #gallery img {
     height: 100%;
@@ -241,6 +242,11 @@
     line-height: 2.5rem;
     margin-bottom: 5vh;
   }
+  /* Работы (начало) */
+  .title_wrapper {
+    font-size: 0.7rem;
+  }
+  /* Работы (конец) */
   /* Услуги (начало) */
   .content h3 {
     font-size: 2rem;
@@ -339,6 +345,39 @@
   .main_txt {
     font-size: 1.2rem;
   }
+  /* Работы (начало) */
+  .title_wrapper {
+    grid-template-columns: 7% 1fr 15%;
+  }
+  .popup_content {
+    flex-direction: column;
+  }
+  .popup_main {
+    display: none;
+  }
+  .popup_sidebar {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
+  }
+  #gallery {
+    flex-direction: column;
+    border: none;
+    width: 100%;
+    max-height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    overflow-y: scroll;
+  }
+  .thumb {
+    max-width: 100%;
+  }
+  #gallery img {
+    margin: 0;
+  }
+  /* Работы (конец) */
   /* Контакты (начало) */
   .contacts {
     font-size: 1.5rem;
